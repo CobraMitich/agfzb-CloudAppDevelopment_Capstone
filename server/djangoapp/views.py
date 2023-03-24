@@ -56,7 +56,7 @@ def get_dealer_details(request, id):
         dealer = get_dealer_by_id_from_cf(dealer_url, id=id)
         context["dealer"] = dealer
     
-        review_url = "https://eu-de.functions.appdomain.cloud/api/v1/web/c7c8ca83-57ad-464f-ad3b-9779869ddfb6/dealership-package/get-review"
+        review_url = "https://eu-de.functions.appdomain.cloud/api/v1/web/c7c8ca83-57ad-464f-ad3b-9779869ddfb6/dealership-package/get-review?id="
         reviews = get_dealer_reviews_from_cf(review_url, id=id)
         print(reviews)
         context["reviews"] = reviews
